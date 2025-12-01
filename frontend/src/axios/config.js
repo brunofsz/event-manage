@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const partyFetch = axios.create({
-  baseURL: "http://localhost:3000/api/",
+  baseURL: "https://event-manage-yv84.onrender.com/api/",
   headers: {
     "Content-Type": "application/json",
   },
