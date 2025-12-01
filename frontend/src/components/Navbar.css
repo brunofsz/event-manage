@@ -1,0 +1,38 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+}
+#navbar ul {
+  align-items: center;
+}
+
+#navbar h2 {
+  color: #7703fc;
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  #navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #navbar h2 {
+    font-size: 1.4rem;
+  }
+
+  #navbar ul li a {
+    font-size: 0.9rem;
+  }
+}

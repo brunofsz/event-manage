@@ -1,0 +1,81 @@
+POST http://localhost:3000/api/service
+Content-Type: application/json
+
+  {
+    "name": "Decoração",
+    "description": "Escolha a decoração para sua festa, e nós a montamos.",
+    "price": 1400,
+    "image": "https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=892&q=80"
+  }
+
+###
+GET http://localhost:3000/api/service
+
+###
+GET http://localhost:3000/api/service/69249ff4122b8fd344f0f6c1
+
+###
+DELETE http://localhost:3000/api/service/6924a47650cc0bd7f48c0ae8
+
+###
+PUT http://localhost:3000/api/service/6924c9e91ec69db688603732
+Content-Type: application/json
+
+{
+  "name": "Serviço Muito Novo ",
+  "description": "Essa é a descrição.",
+  "price": 9999,
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFMYFcRAkAPkE99ylA1tAp9jyL1l15by30w&s"
+}
+
+### 
+POST http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+ "title": "Minha Festa",
+ "autor": "Bruno",
+ "description": "Descrição do meu evento",
+ "budget": 100,
+ "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFMYFcRAkAPkE99ylA1tAp9jyL1l15by30w&s",
+ "services": [
+               {
+                  "name": "Serviço 1 ",
+                  "description": "Essa é a descrição.",
+                  "price": 9999,
+                  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFMYFcRAkAPkE99ylA1tAp9jyL1l15by30w&s"
+               },
+               {
+                  "name": "Serviço 2 ",
+                  "description": "Essa é a descrição.",
+                  "price": 0.5,
+                  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFMYFcRAkAPkE99ylA1tAp9jyL1l15by30w&s"
+               },
+               {
+                  "name": "Serviço 3 ",
+                  "description": "Essa é a descrição.",
+                  "price": 0.5,
+                  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFMYFcRAkAPkE99ylA1tAp9jyL1l15by30w&s"
+               }
+ ]
+}
+###
+GET http://localhost:3000/api/parties
+
+###
+GET http://localhost:3000/api/parties/6924e33ddd231d9ed6bd89c2
+
+###
+DELETE http://localhost:3000/api/parties/6924ecbae52d357a815384bf
+
+###
+PUT http://localhost:3000/api/parties/6924e33ddd231d9ed6bd89c2
+Content-Type: application/json
+
+{
+   "title": "Festa editada",
+   "description": "Esse evento foi editado",
+   "budget": 10000,
+   "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFMYFcRAkAPkE99ylA1tAp9jyL1l15by30w&s",
+   "services": []
+}
