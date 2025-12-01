@@ -6,9 +6,7 @@ async function main() {
   try {
     mongoose.set("strictQuery", true);
 
-    await mongoose.connect(
-      "mongodb+srv://bruno:hjXqyQMFEnaEM6Gw@cluster0.udpefpj.mongodb.net/?appName=Cluster0"
-    );
+    await mongoose.connect(process.env.MONGO_URI);
 
     console.log("DB connected");
   } catch (error) {
